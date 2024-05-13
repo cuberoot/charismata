@@ -2907,6 +2907,7 @@ function create_else_block(ctx) {
 	let input;
 	let input_type_value;
 	let input_placeholder_value;
+	let input_name_value;
 
 	return {
 		c() {
@@ -2929,6 +2930,7 @@ function create_else_block(ctx) {
 			input = claim_element(label_nodes, "INPUT", {
 				type: true,
 				placeholder: true,
+				name: true,
 				class: true
 			});
 
@@ -2939,6 +2941,7 @@ function create_else_block(ctx) {
 			attr(span, "class", "svelte-15f55d3");
 			attr(input, "type", input_type_value = /*input*/ ctx[6].type || "text");
 			attr(input, "placeholder", input_placeholder_value = /*input*/ ctx[6].placeholder);
+			attr(input, "name", input_name_value = /*input*/ ctx[6].name);
 			attr(input, "class", "svelte-15f55d3");
 			attr(label, "class", "svelte-15f55d3");
 		},
@@ -2958,6 +2961,10 @@ function create_else_block(ctx) {
 
 			if (dirty & /*inputs*/ 1 && input_placeholder_value !== (input_placeholder_value = /*input*/ ctx[6].placeholder)) {
 				attr(input, "placeholder", input_placeholder_value);
+			}
+
+			if (dirty & /*inputs*/ 1 && input_name_value !== (input_name_value = /*input*/ ctx[6].name)) {
+				attr(input, "name", input_name_value);
 			}
 		},
 		d(detaching) {

@@ -150,9 +150,9 @@ a.link:hover {
           Facebook
         </a></div></div>
   <form netlify class="svelte-15f55d3"><label class="svelte-15f55d3"><span class="svelte-15f55d3">Name</span>
-          <input type="text" placeholder="John Doe" class="svelte-15f55d3">
+          <input type="text" placeholder="John Doe" name="name" class="svelte-15f55d3">
         </label><label class="svelte-15f55d3"><span class="svelte-15f55d3">Email</span>
-          <input type="email" placeholder="johndoe@johndoe.com" class="svelte-15f55d3">
+          <input type="email" placeholder="johndoe@johndoe.com" name="email" class="svelte-15f55d3">
         </label><label class="svelte-15f55d3"><span class="svelte-15f55d3">Message</span>
           <textarea class="svelte-15f55d3"></textarea>
         </label>
@@ -165,7 +165,7 @@ a.link:hover {
             new App({
               target: document.querySelector('#section-ea0cb2e3'),
               hydrate: true,
-              props: {"heading":"Contact Us","subheading":"Whether you have questions, feedback, or just want to say hello, we're always ready to hear from you.","social":[{"icon":"mdi:email","link":{"url":"mailto:info@charismata.nz","label":"Email"}},{"icon":"mdi:facebook","link":{"url":"https://www.facebook.com/charismatasingerswhangarei/","label":"Facebook"}}],"inputs":[{"type":"text","label":"Name","placeholder":"John Doe"},{"type":"email","label":"Email","placeholder":"johndoe@johndoe.com"},{"type":"textarea","label":"Message","placeholder":"Hello..."}],"submit_label":"Submit"}
+              props: {"heading":"Contact Us","subheading":"Whether you have questions, feedback, or just want to say hello, we're always ready to hear from you.","social":[{"icon":"mdi:email","link":{"url":"mailto:info@charismata.nz","label":"Email"}},{"icon":"mdi:facebook","link":{"url":"https://www.facebook.com/charismatasingerswhangarei/","label":"Facebook"}}],"inputs":[{"name":"name","type":"text","label":"Name","placeholder":"John Doe"},{"name":"email","type":"email","label":"Email","placeholder":"johndoe@johndoe.com"},{"name":"message","type":"textarea","label":"Message","placeholder":"Hello..."}],"submit_label":"Submit"}
             })
           
       })
