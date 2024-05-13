@@ -2981,6 +2981,7 @@ function create_if_block(ctx) {
 	let t0;
 	let t1;
 	let textarea;
+	let textarea_name_value;
 
 	return {
 		c() {
@@ -2999,13 +3000,14 @@ function create_if_block(ctx) {
 			t0 = claim_text(span_nodes, t0_value);
 			span_nodes.forEach(detach);
 			t1 = claim_space(label_nodes);
-			textarea = claim_element(label_nodes, "TEXTAREA", { class: true });
+			textarea = claim_element(label_nodes, "TEXTAREA", { name: true, class: true });
 			children(textarea).forEach(detach);
 			label_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
 			attr(span, "class", "svelte-15f55d3");
+			attr(textarea, "name", textarea_name_value = /*input*/ ctx[6].name);
 			attr(textarea, "class", "svelte-15f55d3");
 			attr(label, "class", "svelte-15f55d3");
 		},
@@ -3018,6 +3020,10 @@ function create_if_block(ctx) {
 		},
 		p(ctx, dirty) {
 			if (dirty & /*inputs*/ 1 && t0_value !== (t0_value = /*input*/ ctx[6].label + "")) set_data(t0, t0_value);
+
+			if (dirty & /*inputs*/ 1 && textarea_name_value !== (textarea_name_value = /*input*/ ctx[6].name)) {
+				attr(textarea, "name", textarea_name_value);
+			}
 		},
 		d(detaching) {
 			if (detaching) detach(label);
