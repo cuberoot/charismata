@@ -3154,7 +3154,14 @@ function create_fragment(ctx) {
 			div1_nodes.forEach(detach);
 			div2_nodes.forEach(detach);
 			t3 = claim_space(section_nodes);
-			form = claim_element(section_nodes, "FORM", { name: true, netlify: true, class: true });
+
+			form = claim_element(section_nodes, "FORM", {
+				name: true,
+				method: true,
+				"data-netlify": true,
+				class: true
+			});
+
 			var form_nodes = children(form);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -3178,7 +3185,8 @@ function create_fragment(ctx) {
 			attr(button, "class", "button svelte-15f55d3");
 			attr(button, "type", "submit");
 			attr(form, "name", "contact");
-			attr(form, "netlify", "");
+			attr(form, "method", "POST");
+			attr(form, "data-netlify", "true");
 			attr(form, "class", "svelte-15f55d3");
 			attr(section, "class", "section-container svelte-15f55d3");
 		},
