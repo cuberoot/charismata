@@ -1,4 +1,4 @@
-// Site Footer - Updated May 13, 2024
+// Site Footer - Updated May 14, 2024
 function noop() { }
 function assign(tar, src) {
     // @ts-ignore
@@ -2968,11 +2968,11 @@ function create_each_block_2(ctx) {
 		},
 		p(ctx, dirty) {
 			const icon_changes = {};
-			if (dirty & /*social*/ 4) icon_changes.icon = /*icon*/ ctx[11];
+			if (dirty & /*social*/ 2) icon_changes.icon = /*icon*/ ctx[11];
 			icon.$set(icon_changes);
-			if ((!current || dirty & /*social*/ 4) && t1_value !== (t1_value = /*link*/ ctx[8].label + "")) set_data(t1, t1_value);
+			if ((!current || dirty & /*social*/ 2) && t1_value !== (t1_value = /*link*/ ctx[8].label + "")) set_data(t1, t1_value);
 
-			if (!current || dirty & /*social*/ 4 && a_href_value !== (a_href_value = /*link*/ ctx[8].url)) {
+			if (!current || dirty & /*social*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[8].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -3151,13 +3151,13 @@ function create_fragment(ctx) {
 	let div3;
 	let div1;
 	let html_tag;
-	let raw_value = /*content*/ ctx[1].html + "";
+	let raw_value = /*content*/ ctx[2].html + "";
 	let t0;
 	let div0;
 	let t1;
 	let div2;
 	let current;
-	let each_value_2 = /*social*/ ctx[2];
+	let each_value_2 = /*social*/ ctx[1];
 	let each_blocks_1 = [];
 
 	for (let i = 0; i < each_value_2.length; i += 1) {
@@ -3262,10 +3262,10 @@ function create_fragment(ctx) {
 			current = true;
 		},
 		p(ctx, [dirty]) {
-			if ((!current || dirty & /*content*/ 2) && raw_value !== (raw_value = /*content*/ ctx[1].html + "")) html_tag.p(raw_value);
+			if ((!current || dirty & /*content*/ 4) && raw_value !== (raw_value = /*content*/ ctx[2].html + "")) html_tag.p(raw_value);
 
-			if (dirty & /*social*/ 4) {
-				each_value_2 = /*social*/ ctx[2];
+			if (dirty & /*social*/ 2) {
+				each_value_2 = /*social*/ ctx[1];
 				let i;
 
 				for (i = 0; i < each_value_2.length; i += 1) {
@@ -3343,17 +3343,17 @@ function create_fragment(ctx) {
 function instance($$self, $$props, $$invalidate) {
 	let { props } = $$props;
 	let { menus } = $$props;
-	let { content } = $$props;
 	let { social } = $$props;
+	let { content } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('props' in $$props) $$invalidate(3, props = $$props.props);
 		if ('menus' in $$props) $$invalidate(0, menus = $$props.menus);
-		if ('content' in $$props) $$invalidate(1, content = $$props.content);
-		if ('social' in $$props) $$invalidate(2, social = $$props.social);
+		if ('social' in $$props) $$invalidate(1, social = $$props.social);
+		if ('content' in $$props) $$invalidate(2, content = $$props.content);
 	};
 
-	return [menus, content, social, props];
+	return [menus, social, content, props];
 }
 
 class Component extends SvelteComponent {
@@ -3363,8 +3363,8 @@ class Component extends SvelteComponent {
 		init(this, options, instance, create_fragment, safe_not_equal, {
 			props: 3,
 			menus: 0,
-			content: 1,
-			social: 2
+			social: 1,
+			content: 2
 		});
 	}
 }
