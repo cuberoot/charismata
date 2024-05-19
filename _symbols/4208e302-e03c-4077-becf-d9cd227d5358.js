@@ -1,4 +1,4 @@
-// Hero 4 - Updated May 18, 2024
+// Hero 4 - Updated May 20, 2024
 function noop() { }
 function run(fn) {
     return fn();
@@ -588,7 +588,7 @@ function create_each_block_1(ctx) {
 			insert_hydration(target, iframe, anchor);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*events*/ 2 && !src_url_equal(iframe.src, iframe_src_value = embedURL(/*video*/ ctx[6].video_url))) {
+			if (dirty & /*events*/ 1 && !src_url_equal(iframe.src, iframe_src_value = embedURL(/*video*/ ctx[6].video_url))) {
 				attr(iframe, "src", iframe_src_value);
 			}
 		},
@@ -663,9 +663,9 @@ function create_each_block(ctx) {
 			append_hydration(div, t2);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*events*/ 2 && t0_value !== (t0_value = /*event*/ ctx[3].name + "")) set_data(t0, t0_value);
+			if (dirty & /*events*/ 1 && t0_value !== (t0_value = /*event*/ ctx[3].name + "")) set_data(t0, t0_value);
 
-			if (dirty & /*embedURL, events*/ 2) {
+			if (dirty & /*embedURL, events*/ 1) {
 				each_value_1 = /*event*/ ctx[3].videos;
 				let i;
 
@@ -703,7 +703,7 @@ function create_fragment(ctx) {
 	let t0;
 	let t1;
 	let section1;
-	let each_value = /*events*/ ctx[1];
+	let each_value = /*events*/ ctx[0];
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value.length; i += 1) {
@@ -714,7 +714,7 @@ function create_fragment(ctx) {
 		c() {
 			section0 = element("section");
 			h1 = element("h1");
-			t0 = text(/*headline*/ ctx[0]);
+			t0 = text(/*headline*/ ctx[1]);
 			t1 = space();
 			section1 = element("section");
 
@@ -729,7 +729,7 @@ function create_fragment(ctx) {
 			var section0_nodes = children(section0);
 			h1 = claim_element(section0_nodes, "H1", { class: true });
 			var h1_nodes = children(h1);
-			t0 = claim_text(h1_nodes, /*headline*/ ctx[0]);
+			t0 = claim_text(h1_nodes, /*headline*/ ctx[1]);
 			h1_nodes.forEach(detach);
 			section0_nodes.forEach(detach);
 			t1 = claim_space(nodes);
@@ -762,10 +762,10 @@ function create_fragment(ctx) {
 			}
 		},
 		p(ctx, [dirty]) {
-			if (dirty & /*headline*/ 1) set_data(t0, /*headline*/ ctx[0]);
+			if (dirty & /*headline*/ 2) set_data(t0, /*headline*/ ctx[1]);
 
-			if (dirty & /*events, embedURL*/ 2) {
-				each_value = /*events*/ ctx[1];
+			if (dirty & /*events, embedURL*/ 1) {
+				each_value = /*events*/ ctx[0];
 				let i;
 
 				for (i = 0; i < each_value.length; i += 1) {
@@ -804,22 +804,22 @@ function embedURL(youtubeURL) {
 
 function instance($$self, $$props, $$invalidate) {
 	let { props } = $$props;
-	let { headline } = $$props;
 	let { events } = $$props;
+	let { headline } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('props' in $$props) $$invalidate(2, props = $$props.props);
-		if ('headline' in $$props) $$invalidate(0, headline = $$props.headline);
-		if ('events' in $$props) $$invalidate(1, events = $$props.events);
+		if ('events' in $$props) $$invalidate(0, events = $$props.events);
+		if ('headline' in $$props) $$invalidate(1, headline = $$props.headline);
 	};
 
-	return [headline, events, props];
+	return [events, headline, props];
 }
 
 class Component extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance, create_fragment, safe_not_equal, { props: 2, headline: 0, events: 1 });
+		init(this, options, instance, create_fragment, safe_not_equal, { props: 2, events: 0, headline: 1 });
 	}
 }
 
