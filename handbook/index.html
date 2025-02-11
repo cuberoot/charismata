@@ -1,0 +1,243 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <title>About Us</title><!-- HEAD_svelte-f4s33s_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><link rel="icon" type="image/png" sizes="32x32" href="https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg"><link rel="preconnect" href="https://fonts.bunny.net"><meta name="description" content="Info about the one billion trees project"><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+/* Design tokens (apply to components) */
+:root {
+  /* Custom theme options */
+  --color-accent: #004700;
+
+  /* Base values */
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 0;
+  --border-color: #e0e1e1;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: system-ui, sans-serif;
+  color: #111;
+  line-height: 1.5;
+  font-size: 1.125rem;
+  background: white;
+}
+
+/* Elements */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+a.link {
+  line-height: 1.3;
+
+  border-bottom: 2px solid var(--color-accent);
+  transform: translateY(-2px); /* move link back into place */
+  transition: var(--transition, 0.1s border);
+}
+
+a.link:hover {
+    border-color: transparent;
+  }
+
+.heading {
+  font-size: 2.5rem;
+  line-height: 1.15;
+
+}
+
+.button {
+  color: white;
+  background: var(--color-accent, rebeccapurple);
+  border-radius: 0;
+  padding: 18px 24px;
+  transition: var(--transition, 0.1s box-shadow);
+  border: 0;
+}
+
+/* reset */
+
+.button:hover {
+    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+  }
+
+.button.inverted {
+    background: transparent;
+    color: var(--color-accent, rebeccapurple);
+  }
+
+/* Content Section */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.content p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+.content img {
+    width: 100%;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+.content a.link {
+    line-height: 1.3;
+    font-weight: 500;
+    border-bottom: 2px solid var(--color-accent);
+    transform: translateY(-2px); /* move link back into place */
+    transition: var(--transition, 0.1s border);
+  }
+.content a.link:hover {
+      border-color: transparent;
+    }
+.content h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+.content h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+.content h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+.content ul {
+    list-style: disc;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content ol {
+    list-style: decimal;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content blockquote {
+    padding: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--color-accent);
+  }
+</style><!-- HEAD_svelte-f4s33s_END -->
+      <style>.section-container.svelte-136lx2d.svelte-136lx2d{display:flex;justify-content:space-between;align-items:center;padding-block:2rem}.logo.svelte-136lx2d.svelte-136lx2d{font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-136lx2d.svelte-136lx2d{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-136lx2d nav.svelte-136lx2d{display:flex;gap:2rem}.desktop-nav.svelte-136lx2d nav a.link.svelte-136lx2d{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-136lx2d nav a.link.svelte-136lx2d:hover,.desktop-nav.svelte-136lx2d nav a.link .active.svelte-136lx2d{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-136lx2d.svelte-136lx2d{display:flex
+}}.mobile-nav.svelte-136lx2d.svelte-136lx2d{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-136lx2d.svelte-136lx2d{display:none
+}}#popup.svelte-136lx2d.svelte-136lx2d{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-136lx2d button#close.svelte-136lx2d{position:absolute;right:1rem;top:1rem}
+footer.svelte-1uxs6p6.svelte-1uxs6p6{background:#2b312b;color:white}.section-container.svelte-1uxs6p6.svelte-1uxs6p6{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4rem}.social-links.svelte-1uxs6p6.svelte-1uxs6p6{display:grid;gap:0.75rem}.social-links.svelte-1uxs6p6 a.svelte-1uxs6p6{display:flex;align-items:center;gap:0.75rem}.social-links.svelte-1uxs6p6 a .icon.svelte-1uxs6p6{font-size:1.75rem;transition:var(--transition, 0.1s transform)}.social-links.svelte-1uxs6p6 a:hover .icon.svelte-1uxs6p6{transform:scale(1.1)}.content.svelte-1uxs6p6.svelte-1uxs6p6{margin:initial;padding:0;line-height:1.1}.nav-items.svelte-1uxs6p6.svelte-1uxs6p6{display:flex;flex-wrap:wrap;gap:4rem}.nav-items.svelte-1uxs6p6 ul.svelte-1uxs6p6{display:grid;gap:0.5rem}.nav-items.svelte-1uxs6p6 ul .link.svelte-1uxs6p6{border-bottom:2px solid white}.nav-items.svelte-1uxs6p6 ul .link.svelte-1uxs6p6:hover{border-color:transparent}.nav-items.svelte-1uxs6p6 h3.svelte-1uxs6p6{font-weight:500;font-size:1.5rem;margin-bottom:1rem}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-6d641308"><header class="section-container svelte-136lx2d"><div class="desktop-nav svelte-136lx2d"><a href="/" class="logo svelte-136lx2d">Charismata</a>
+    <nav class="svelte-136lx2d"><a class="link svelte-136lx2d" href="/">Home</a><a class="link svelte-136lx2d" href="/music">Our Music</a><a class="link svelte-136lx2d" href="/about">About</a></nav></div>
+  <div class="mobile-nav svelte-136lx2d"><a href="/" class="logo svelte-136lx2d">Charismata</a>
+    <button id="open" aria-label="Open mobile navigation"></button>
+    </div></header></div> 
+<div class="section" id="section-8dafbb0d"><div class="section"><div class="section-container content"><!-- HTML_TAG_START --><h1 id="memberhandbook">Member Handbook</h1>
+<p><em>Above all, love each other deeply… – 1 Peter 4:8a.</em></p>
+<p>Charismata is a volunteer community organisation that values Christian ministry, quality musical expression, healthy social engagement and integrity of conduct. These values are foundational for all we do, whether rehearsing, socialising or performing. Within our community, we honour and respect one another at all times.</p>
+<p>In order to stay true to the values of the organisation we would ask members to take note of the following information and adhere to all guidelines and our code of conduct.</p>
+<h2 id="rehearsing">Rehearsing</h2>
+<p>At present Charismata prepares for two concerts each year (approximately July/December) through a series of weekly rehearsals. These rehearsals are currently held at Calvary Chapel in Maunu on Thursday evenings starting at 7:15. Regarding these rehearsals:</p>
+<ul>
+<li><p>Members are expected to plan to attend all rehearsals. Where they are prevented by illness, unforeseen event, etc. they are to make every reasonable effort to inform one of the co-leaders directly of this.</p></li>
+<li><p>In a case where a member knows in advance they will miss a rehearsal during the rehearsal season, they are expected to convey this information to one of the co-leaders at the start of the rehearsal season (February and August). Where a member will miss three or more consecutive rehearsals (2 in the last 6 weeks), or 4 total missed rehearsals (3 in the last 6 weeks), the member may be disqualified from singing in the next concert, at the co-leaders’ discretion.</p></li>
+<li><p>Members are expected to let a co-leader know within the first couple of weeks of the announcement of a concert date if they will be unable to attend the concert or if they will miss any rehearsals in the final month before the concert. Our general policy is to allow such members to attend rehearsals until the final month prior to the concert date. The co-leaders will exercise their best judgement in the application of this general policy.</p></li>
+<li><p>Members should strive to arrive at the rehearsal venue in a timely manner such that they are seated and ready to sing at the time the rehearsal is scheduled to begin; if they cannot arrive on time, they should make every effort to inform one of the co-leaders directly of this.</p></li>
+<li><p>The premises of Calvary Baptist church, and its contents are owned or managed by that church. During rehearsals, all members should strive to treat this premises with respect and use contents reasonably. Individual members may be liable for any damage they are personally responsible for, particularly where reasonable care has not been taken.</p></li>
+</ul>
+<h2 id="music">Music</h2>
+<p>A music folder will be assigned to each member at the beginning of the rehearsal season. The folder is the property of Charismata and members are responsible for the reasonable care of this property. Each member is asked to pay a $5 “rental fee” to the choir. Folders may be kept between seasons where there is an intention of returning to the choir in the next season. When a member plans to be absent for a season (or more) the folder is to be returned directly, or indirectly (i.e., through another member) to the choir librarian or one of the co-leaders.</p>
+<p>Music purchased by Charismata remains the property of the choir and is expected to be returned at the start of each rehearsal season to the choir librarian.</p>
+<h2 id="wardrobe">Wardrobe</h2>
+<p>Female members of Charismata are blessed to have a custom-made dress and scarf while they are with Charismata. Each member is asked to contribute $20 towards the dress which will be returned to them on request when they turn in their dress. There are also handmade earrings for each female member with pierced ears, which they may keep. The dresses, on the other hand, remain the property of Charismata, though members who are taking a temporary leave from the choir may keep them in their possession.</p>
+<p>Our male members are given cummerbunds and bowties to wear in performances. Again, these items are the property of Charismata, and we ask that they be returned when a member leaves the choir.</p>
+<p><strong>Our standard concert wardrobe is:</strong></p>
+<p><strong>Women:</strong> choir dress, scarf, black shoes. Jewellery may be worn, and the choir earrings (those with pierced ears).</p>
+<p><strong>Men:</strong> black trousers, white, long-sleeved dress shirts, cummerbunds, bow ties, black socks and shoes.</p>
+<p>For any questions or concerns about your wardrobe, please contact our wardrobe mistress, Susan Alves (see below).</p>
+<h2 id="subs">Subs</h2>
+<p>While Charismata operates as a non-profiting-making entity, the choir has a number of significant expenses (venue hire, accompanist/instrumentalist remuneration, etc.)&nbsp;each year it must cover. This is done by members subs and the proceeds of concerts. Thus, members are asked to choose from the following options for subs:</p>
+<ul>
+<li>An annual payment of $80</li>
+<li>A per-season payment of $50</li>
+<li>A per-term payment of $30 (over 4 terms)</li>
+</ul>
+<p>Subs should be paid to: <br>
+Charismata&nbsp;<br>
+01-0487-0389379-02 (ANZ)</p>
+<p>Use your name and “annual”, season” or “term” (including number) as a reference.</p>
+<p>A reduced payment may be considered where there are two or more members from the same family, and for those whose financial circumstances would make this level of contribution difficult. Please contact one of the co-leaders (see below) if this describes your circumstances and you would like us to consider a different arrangement.</p>
+<h2 id="communication">Communication</h2>
+<p>All official communications to the choir will be made by email. Additionally, our “Charismata Notifications” WhatsApp group may also be used to send time-sensitive official communications. We also have a moderately active social “Charismata” WhatsApp group. Please contact our music librarian, Christina Lange (see below) if you wish to join either What’sApp group.</p>
+<p>With regards to your personal contact details, the communication manager will take every reasonable precaution to safeguard member’ information or to obtain consent before sharing it.</p>
+<p>All members, volunteers, etc. are required to follow our code of conduct (see below) when communicating personally or electronically with any other member, or with the group at large.</p>
+<h2 id="codeofconduct">Code of Conduct</h2>
+<p>As already stated, within our choir, we honour and respect one another at all times, both within and outside choir. Thus, Charismata prohibits and will not tolerate harassment of any kind within the organisation.</p>
+<p>We request that all members read our full policy around harassment online at: <a href="https://charismata.nz/policies">https://charismata.nz/policies</a></p>
+<h2 id="charismataleadership">Charismata Leadership</h2>
+<p>Charismata is a volunteer organisation under the direction of two co-leaders who are assisted by a steering committee, with most members of this committee assigned to specific roles.</p>
+<h2 id="coleadersnbsp">Co-Leaders&nbsp;</h2>
+<p>The Charismata co-leaders may be contacted by email about any of the matters referenced in this document.</p>
+<p><strong>Lisbe Jooste</strong>, principal conductor: <a href="mailto:veer12@xtra.co.nz">veer12@xtra.co.nz</a><br></p>
+<p><strong>Lisa Taylor</strong>, associate conductor, communications: <a href="mailto:lisa@maplekiwi.com">lisa@maplekiwi.com</a></p>
+<h2 id="steeringcommittee">Steering Committee</h2>
+<p>Our steering committee is comprised of those members with specific responsibilities, two, “members at large” as well as our co-leaders. Other members may be contacted by email if needed, though it is preferable to speak with them directly at rehearsals.</p>
+<p><strong>Susan Alves</strong>, wardrobe: <a href="mailto:alvessusan49@gmail.com">alvessusan49@gmail.com</a><br>
+<strong>Carine Lange</strong>, music librarian: <a href="mailto:cvlange@xtra.co.nz">cvlange@xtra.co.nz</a><br>
+<strong>Michael Taylor</strong>, webmaster: <a href="mailto:michael@mapleiwi.com">michael@mapleiwi.com</a><br>
+<strong>Jeanne Kelber-Hill</strong>: <a href="mailto:jeannehill.nz@gmail.com">jeannehill.nz@gmail.com</a><br>
+<strong>Johan Jooste</strong>: <a href="mailto:veer12@xtra.co.nz">veer12@xtra.co.nz</a></p><!-- HTML_TAG_END --></div></div></div> 
+<div class="section" id="section-4f70c96e"><footer class="svelte-1uxs6p6"><div class="section-container svelte-1uxs6p6"><div class="content svelte-1uxs6p6"><!-- HTML_TAG_START --><h3 id="charismatabr">Charismata <br></h3><!-- HTML_TAG_END -->
+      <div class="social-links svelte-1uxs6p6"><a href="https://www.facebook.com/charismatasingerswhangarei/" class="svelte-1uxs6p6"><span class="icon svelte-1uxs6p6"></span>
+            charismatasingerswhangarei
+          </a></div></div>
+    <div class="nav-items svelte-1uxs6p6"><nav><h3 class="svelte-1uxs6p6">Coming up</h3>
+          <ul class="svelte-1uxs6p6"><li><a class="link svelte-1uxs6p6" href="/concert">Next concert</a>
+              </li></ul>
+        </nav><nav><h3 class="svelte-1uxs6p6">About us</h3>
+          <ul class="svelte-1uxs6p6"><li><a class="link svelte-1uxs6p6" href="/about">The choir</a>
+              </li><li><a class="link svelte-1uxs6p6" href="/music">Our music</a>
+              </li><li><a class="link svelte-1uxs6p6" href="/contact-us">Contact Us</a>
+              </li><li><a class="link svelte-1uxs6p6" href="/policies">Policies</a>
+              </li><li><a class="link svelte-1uxs6p6" href="/handbook">Handbook</a>
+              </li></ul>
+        </nav></div></div></footer></div> 
+
+      <script type="module">
+      import('/_symbols/2b567be0-0fb8-42b5-b66a-64fb464304ab.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-4f70c96e'),
+              hydrate: true,
+              props: {"content":{"html":"<h3 id=\"charismatabr\">Charismata <br></h3>","markdown":"### Charismata <br>\n\n\n\n"},"menus":[{"title":"Coming up","links":[{"link":{"url":"/concert","label":"Next concert"}}]},{"title":"About us","links":[{"link":{"url":"/about","label":"The choir"}},{"link":{"url":"/music","label":"Our music"}},{"link":{"url":"/contact-us","label":"Contact Us","active":false}},{"link":{"label":"Policies","url":"/policies","active":false}},{"link":{"label":"Handbook","url":"/handbook","active":false}}]}],"social":[{"icon":"mdi:facebook","link":{"url":"https://www.facebook.com/charismatasingerswhangarei/","label":"charismatasingerswhangarei","active":false}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/0b1d03e4-233b-494d-b78c-a3005fee3296.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-6d641308'),
+              hydrate: true,
+              props: {"":"","logo":{"image":{"alt":"Charismata logo","url":"https://supabase.strategicdevelopment.nz/storage/v1/object/public/images/ebd7bb33-69e7-4ded-b2ff-befbcad0fce6/1715242393347Logo.svg"},"title":"Charismata"},"site_nav":[{"link":{"url":"/","label":"Home"}},{"link":{"url":"/music","label":"Our Music","active":false}},{"link":{"url":"/about","label":"About"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    </script>
+    </body>
+  </html>
+  
